@@ -1,1 +1,9 @@
 language: java
+jdk:
+  - oraclejdk8
+
+before_install:
+      - mkdir lib/
+    - wget -P lib/ https://sourceforge.net/projects/jsqlparser/files/jsqlparser/jsqlparser-0.7.0.jar/jsqlparser-0.7.0.jar/download
+    - jar xvf lib/download
+    - mvn validate
